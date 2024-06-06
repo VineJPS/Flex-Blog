@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222;
+}
+
+ul{
+    list-style: none;         /*Removendo as marcações da listas*/
+}
+
+a{
+    text-decoration: none;    /*tirando os efeitos do link como sublinhado*/
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+/*Superinfo, "cabeçalho do cabaçalho"*/
+.superinfo-bg{                  /*Existem 2 superinfos, um é para o fundo e o outro para o texto, de uma analizado no começo do HTML*/
+    background: #122ab2;
+    color: white;
+}
+.superinfo{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.superinfo p, .superinfo a{ /*margin*/
+    margin: 0 10px 10px 10px;
+
+}
+.superinfo a{
+    color: white;
+}
+/*Fim do superinfo*/
+
+
+/*Menu*/
+.menu-bg{
+    background: #2c70ff;
+}
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu a{
+    color: white;
+}
+.menu-logo a{
+    font-size: 2.25em;  /* 'em' Tamanho da fonte do elemento pai*/
+    font-weight: bold;
+    margin: 0 10px;
+}
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;  /*flex wrap joga os itens um embaixo do outro*/
+}
+
+.menu-nav a{
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+.menu-nav a:hover{
+    color: #122ab2
+}
+
+
+/*Introdução*/
+.introducao{
+    font-size: 3em;
+    line-height: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+/*Sobre*/
+.sobre{
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    max-width:  960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap; /*pro caso de diminuir demais a tela ele jofa os itens para baixo*/
+}
+.sobre-info{
+    flex: 2 1 300px;        /*ela vai alterar o item do flex box, no caso o texto e as duas imagnes, 
+                            e tambem é uma outra opção para jogar item para baixo: 2 quanto o item vai aumenta flex grow, e 1 o quanto ele vai diminuir, 300px é uma medida alternativa para o caso de diminuir o valor*/
+    margin: 0 10px;
+}
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: 0.5em ;
+
+}
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.sobre-info{    /*o flex é largura */
+    flex: 1 1 160px;
+    margin: 0 10px;
+}
+
+
+/*Produtos*/
+.produtos{
+    max-width: 960px;
+    margin: 60px auto;
+}
+.produtos h1{
+    font-size:  3em;
+    margin: 0 10px 60px 10px;
+}
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.produtos-item{
+    flex: 1 1 175px;
+    margin: 0;
+}
+.produtos-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    background: #f7f7f7;
+    padding: 60px 20px;
+}
+.purple{
+    border-top: 8px solid #ae81ff;
+}
+.pink{
+    border-top: 8px solid #f9265e
+}
+.blue{
+    border-top: 8px solid #66d9eb;
+}
+
+
+/*Preco*/
+.preco{
+    background: #f7f7f7;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;    /*Primeiro se usa o flex wrap */
+}
+.preco-item{
+    flex: 1 1 260px;         /*E depois o flex*/
+    border: 4px solid white;
+    padding: 20px;
+    margin: 10px;
+}
+.preco-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+.preco-item span{
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+.preco-item sup{
+    font-size: 1.5rem;
+}
+.preco-item ul{
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25em;
+    font-style: italic;
+    color: #7c7c7c;
+}
+.preco-item li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.preco-item li::after{           /*radius arredondamento, after é colocar um ponto personalizado depois da lista*/
+    content: '→';                /*conteudo que vai colocar no box, texte!, segure alt e digite 15 no teclado para inserir a ingrenagem*/
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #2c70ff;
+    border-radius: 50%;
+}
+.preco-item a{
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #7c7c7c;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.25em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/*Qualidade*/
+.qualidade{
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.qualidade-item{
+    flex: 1 1 300px;
+    margin: 20px 30px;
+}
+.qualidade-item h2{
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+.qualidade-item h2::before{    /*marcador, before é antes do item*/
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px ;
+}
+.qualidade-item:nth-child(3n+1) h2::before{     /*n representa um elemento no caso a coluna, e vale 0 inicialmente, 3.0 = 0 + 1 = 1, 3 é o multiplicador da linha que sera aplicado o elemento, e 1 o elemento*/
+    background: #ae81ff;
+}
+.qualidade-item:nth-child(3n+2) h2::before{
+    background: #f9265e;
+}
+.qualidade-item:nth-child(3n+3) h2::before{
+    background: #66d9eb;
+}
+.qualidade-item p{
+    font-size: 1.25em;
+    line-height: 1.4em;
+    color: #7c7c7c;
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    background: #2c70ff;
+    height: 150px;
+    align-items: center;
+}
+.footer p{
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2;
+}
+
+/*Botão back-top*/
+.back-to-top{
+    background: #122ab2;
+    color: white;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    padding: 0.5em;
+    clip-path: circle(); /*muda a forma*/
+    font-size: 1.5em;
+    line-height: 0;
+    transition: 0.3;
+    transform: translateY(100%);
+    visibility: hidden; /*para sumir*/
+    opacity: 0;
+}
+.back-to-top.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);   /*essse é o script, e ele precisa SEMPRE ir no final da pagina*/
+}
